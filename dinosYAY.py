@@ -14,8 +14,8 @@ class jurDino:
         else:
             print(f"{self.name} does not eat {food}")
 
-    def dinoInfo(self,name,species,diet,age):
-        print(f"{self.name} is a {self.species} and is {self.age} years old. She eats {self.diet}.")
+    def dinoInfo(self):
+        return (f"{self.name} is a {self.species} and is {self.age} years old. She eats {self.diet}.")
 
 
 raptor1 = jurDino("Blue","Velociraptor",9,"meat")
@@ -24,7 +24,7 @@ raptor3 = jurDino("Delta","Velociraptor",8,"meat")
 raptor4 = jurDino("Echo","Velociraptor",7,"meat")
 rex = jurDino("Rexy","Tyrannosaurus Rex",5,"meat")
 
-raptor1.dinoInfo()
+print(raptor1.dinoInfo())
 raptor3.roar()
 raptor4.eat("plant")
 rex.eat("meat")
