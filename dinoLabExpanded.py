@@ -7,7 +7,7 @@ class jurDino:
         self.diet = diet
 
     def roar(self):
-        print(f"{self.name} says GRRRRAAAGHHGGGGHGHHH")
+        print(f"{self.name} roars")
 
     def eat(self,food):
         if food == self.diet:
@@ -18,26 +18,33 @@ class jurDino:
     def dinoInfo(self):
         return (f"{self.name} is a {self.species} and is {self.age} years old. She eats {self.diet}.")
 
+
 #! subclasses for different types of dinosaurs
 class flyingDino(jurDino):
     def __init__(self,name,species,age,diet,wingspan):
         super().__init__(name,species,age,diet)
         self.wingspan = wingspan
 
-        def roar(self):
-            return f"{self.name} schreeches in the sky"
+    def roar(self):
+        print(f"{self.name} schreeches in the sky")
 
 class waterDino(jurDino):
     def __init__(self,name,species,age,diet,swimSpeed):
         super().__init__(name,species,age,diet)
         self.swimSpeed = swimSpeed
 
-        def roar(self):
-            return f"{self.name} roars while underwater"
+    def roar(self):
+        print(f"{self.name} roars while underwater")
 
+#! getter method for dinosaur's age (the underscore makes it so the 
+#! age attribute is private)
 def getAge(self):
     return self._age
 
 
-flyingDino("Perry","Pterodactyl",136,"meat")
-jurDino("Blue","Velociraptor",9,"meat")
+dino1 = flyingDino("Perry","Pterodactyl",136,"meat",3)
+dino2 = jurDino("Blue","Velociraptor",9,"meat")
+
+
+dino1.roar()
+dino2.roar()
